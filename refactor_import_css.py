@@ -142,7 +142,7 @@ software_ADB = ["delfiPQ/HAL/hal_functions.c",
 software_core.append("core/testing.c")
 
 def subpADB(fADB):
-	f = pq9_path + "core/testing.c"	
+	f = pq9_path + fADB	
   cmd = "ln -s " + f + " " + folder
 	pipe = subprocess.Popen(cmd, shell=True)	
   pipe.wait()
@@ -216,7 +216,7 @@ software_EPS = ["delfiPQ/HAL/hal_functions.c",
 	"delfiPQ/EPS/subsystem.c"]
 
 def subpEPS(fEPS):
-	f = pq9_path + "core/testing.c"
+	f = pq9_path + fEPS
 	cmd = "ln -s " + f + " " + folder	
   pipe = subprocess.Popen(cmd, shell=True)	
   pipe.wait()
@@ -344,8 +344,6 @@ print path + "INA226"
 print path + "TMP100"
 print path + "MB85RS256A"
 
-
-
 print "Making ADCS project"
 
 working_dir = path + "ADCS_software"
@@ -385,7 +383,7 @@ software_ADCS = ["delfiPQ/HAL/hal_functions.c",
 software_core.remove("core/en_data_service.c")
 
 def subpADCS(fADCS):
-	f = pq9_path + "core/testing.c"
+	f = pq9_path + fADCS
 	cmd = "ln -s " + f + " " + folder
 	pipe = subprocess.Popen(cmd, shell=True)
 	pipe.wait()
@@ -466,7 +464,7 @@ software_COMMS = ["delfiPQ/HAL/hal_functions.c",
 software_core.insert(0, "core/en_data_service.c")
 
 def subpCOMMS(fCOMMS):
-	f = pq9_path + "core/testing.c"
+	f = pq9_path + fCOMMS
 	cmd = "ln -s " + f + " " + folder
 	pipe = subprocess.Popen(cmd, shell=True)
 	pipe.wait()
