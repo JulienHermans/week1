@@ -13,7 +13,7 @@ print "Workspace dir:", path
 print "Cloning repos"
 
 software = ["git clone https://github.com/nchronas/ADB_software.git",
-  "git clone https://github.com/nchronas/EPS_software.git",
+  	"git clone https://github.com/nchronas/EPS_software.git",
 	"git clone https://github.com/nchronas/OBC_software.git",
 	"git clone https://github.com/nchronas/ADCS_software.git",
 	"git clone https://github.com/nchronas/RED_software.git",
